@@ -45,7 +45,10 @@ Build-bench automatically:
 │ ├── get_repo_structure.py # Tool: Structure Extraction
 │ ├── upload_files.py # Tool: Upload to Build Service
 │ ├── check_build_res.py # Tool: Check Build Result (success/failure)
-│
+│── result_log_res/
+│ └── texmath.log # Log file for texmath package repair process
+│── result_text_res/
+│ └── texmath_result.txt # Text file for texmath package repair result
 ├── client.py # MCP client: executes repair loop (Full File Generation)
 ├── client_patch.py # MCP client: executes repair loop (Patch Generation)
 ├── server.py # MCP server coordinating LLM and tools (Full File Generation)
