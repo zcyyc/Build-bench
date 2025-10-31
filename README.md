@@ -3,10 +3,17 @@
 This repository implements the **Build-bench** framework — an end-to-end evaluation pipeline for large language models (LLMs) to repair software build failures across instruction set architectures (ISA), such as **x86_64 → aarch64** and **aarch64 → x86_64**.
 
 The system enables **autonomous reasoning**, **tool-augmented repair**, and **executable verification** through iterative interactions based on the Model Context Protocol (MCP).
+An interactive visualization of all model results (success/failure cases, tool calls, repair iterations) is available at:  
+👉 **[https://buildbench-hub.github.io/buildbench.github.io](https://buildbench-hub.github.io/buildbench.github.io/)**  
+
 
 ---
 
 ## 🌐 Overview
+
+<p align="center">
+  <img src="images/framework.png" alt="Build-bench Framework" width="85%">
+</p>
 
 Build-bench automatically:
 1. Collects failed software packages and contextual artifacts (source archives, specs, logs);
