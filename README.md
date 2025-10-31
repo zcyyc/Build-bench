@@ -87,18 +87,6 @@ Patch Generation Strategy
 python client_patch.py
 ```
 
-Each repair session will iteratively:
-
-Extract package structure;
-
-Retrieve failure logs;
-
-Generate repair suggestions via LLM;
-
-Apply modifications to source/spec files;
-
-Upload and validate builds on OBS.
-
 
 ## 📊 Data and Case Study
 
