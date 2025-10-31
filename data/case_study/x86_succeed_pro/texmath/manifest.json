@@ -1,0 +1,30 @@
+{
+  "task": {
+    "project": "home:lalala123:x86_succeed_pro",
+    "package": "texmath",
+    "repo": "ARM",
+    "arch": "aarch64",
+    "rev": "1",
+    "srcmd5": "066fffb31f45c43b2f1b8694c348d9c9"
+  },
+  "files": [
+    {
+      "name": "_constraints",
+      "size": "238"
+    },
+    {
+      "name": "texmath-0.13.tar.gz",
+      "size": "1490531"
+    },
+    {
+      "name": "texmath.changes",
+      "size": "50033"
+    },
+    {
+      "name": "texmath.spec",
+      "size": "5208"
+    }
+  ],
+  "created_at": 1758780370,
+  "version": 1
+}

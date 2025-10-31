@@ -1,0 +1,89 @@
+
+================================================================================
+Timestamp: 2025-10-26 12:00:06.674671
+File: temp_workspace/texmath/texmath.spec
+Diff lines: 12
+
+--- temp_workspace/texmath/texmath.spec (old)
++++ temp_workspace/texmath/texmath.spec (new)
+@@ -19,6 +19,9 @@
+ %global pkg_name texmath
+
+ %global pkgver %{pkg_name}-%{version}
+
+ %bcond_with tests
+
++# Avoid passing unsupported GHC flags from ghc-rpm-macros
+
++%global ghc_options %{nil}
+
++%global ghc_optflags %{nil}
+
+ Name:           %{pkg_name}
+
+ Version:        0.13
+
+ Release:        0
+
+
+================================================================================
+Timestamp: 2025-10-26 12:02:48.758261
+File: temp_workspace/texmath/texmath.spec
+Diff lines: 13
+
+--- temp_workspace/texmath/texmath.spec (old)
++++ temp_workspace/texmath/texmath.spec (new)
+@@ -137,6 +137,10 @@
+ %check
+
+ %cabal_test
+
+ 
+
++# Ensure runtime linker cache is updated for the shared library
+
++%post -n ghc-%{name} -p /sbin/ldconfig
+
++%postun -n ghc-%{name} -p /sbin/ldconfig
+
++
+
+ %post -n ghc-%{name}-devel
+
+ %ghc_pkg_recache
+
+ 
+
+
+================================================================================
+Timestamp: 2025-10-26 12:09:18.987087
+File: temp_workspace/texmath/texmath.spec
+Diff lines: 15
+
+--- temp_workspace/texmath/texmath.spec (old)
++++ temp_workspace/texmath/texmath.spec (new)
+@@ -138,8 +138,10 @@
+ %cabal_test
+
+ 
+
+ # Ensure runtime linker cache is updated for the shared library
+
+-%post -n ghc-%{name} -p /sbin/ldconfig
+
+-%postun -n ghc-%{name} -p /sbin/ldconfig
+
++%post -n ghc-%{name}
+
++/sbin/ldconfig
+
++%postun -n ghc-%{name}
+
++/sbin/ldconfig
+
+ 
+
+ %post -n ghc-%{name}-devel
+
+ %ghc_pkg_recache
+

@@ -1,0 +1,15 @@
+LLM_PROVIDER: "openai"
+
+paths:
+  base_dir: "data/case_study/x86_succeed_pro"
+  result_dir: "result_text_res"
+  temp_work_dir: "temp_workspace"
+  log_dir: "result_log_res"
+
+user:
+  user_name: "lalala123"
+  password: "zhaochenyu921"
+  target_project: "home:lalala123:case_study"
+  repository_name: "arm"
+  architecture_name: "aarch64"
+  obs_api_url: "https://api.opensuse.org"

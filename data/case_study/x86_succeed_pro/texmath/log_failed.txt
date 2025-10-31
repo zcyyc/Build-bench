@@ -1,0 +1,992 @@
+[    0s] Using BUILD_ROOT=/var/cache/obs/worker/root_29/.mount
+[    0s] Using BUILD_ARCH=aarch64:aarch64_ilp32:armv8l
+[    0s] Doing kvm build in /var/cache/obs/worker/root_29/root
+[    0s] 
+[    1s] 
+[    1s] i03-armsrv1 started "build texmath.spec" at Mon Sep 22 06:49:39 UTC 2025.
+[    1s] 
+[    1s] Building texmath for project 'home:lalala123:x86_succeed_pro' repository 'ARM' arch 'aarch64' srcmd5 '066fffb31f45c43b2f1b8694c348d9c9'
+[    1s] 
+[    1s] processing recipe /var/cache/obs/worker/root_29/.build-srcdir/texmath.spec ...
+[    1s] running changelog2spec --target rpm --file /var/cache/obs/worker/root_29/.build-srcdir/texmath.spec
+[    1s] init_buildsystem --configdir /var/run/obs/worker/29/build/configs --cachedir /var/cache/build --prepare --clean --rpmlist /var/cache/obs/worker/root_29/.build.rpmlist /var/cache/obs/worker/root_29/.build-srcdir/texmath.spec build ...
+[    2s] [1/27] preinstalling compat-usrmerge-tools...
+[    2s] [2/27] preinstalling system-user-root...
+[    2s] [3/27] preinstalling terminfo-base...
+[    2s] [4/27] preinstalling filesystem...
+[    2s] [5/27] preinstalling glibc...
+[    2s] [6/27] preinstalling fillup...
+[    2s] [7/27] preinstalling libacl1...
+[    2s] [8/27] preinstalling libattr1...
+[    2s] [9/27] preinstalling libbz2-1...
+[    2s] [10/27] preinstalling libcap2...
+[    2s] [11/27] preinstalling libgmp10...
+[    2s] [12/27] preinstalling libgpg-error0...
+[    2s] [13/27] preinstalling libjitterentropy3...
+[    2s] [14/27] preinstalling liblua5_4-5...
+[    2s] [15/27] preinstalling liblzma5...
+[    2s] [16/27] preinstalling libpcre2-8-0...
+[    2s] [17/27] preinstalling libpopt0...
+[    2s] [18/27] preinstalling libz1...
+[    2s] [19/27] preinstalling libzstd1...
+[    2s] [20/27] preinstalling libncurses6...
+[    2s] [21/27] preinstalling libreadline8...
+[    2s] [22/27] preinstalling libselinux1...
+[    2s] [23/27] preinstalling libgcrypt20...
+[    3s] [24/27] preinstalling bash...
+[    3s] [25/27] preinstalling bash-sh...
+[    3s] [26/27] preinstalling coreutils...
+[    3s] [27/27] preinstalling rpm...
+[    3s] 
+[    3s] [1/18] preinstalling grep...
+[    3s] [2/18] preinstalling kernel-obs-build...
+[    3s] [3/18] preinstalling libaudit1...
+[    3s] [4/18] preinstalling libcap-ng0...
+[    3s] [5/18] preinstalling libcrypt1...
+[    3s] [6/18] preinstalling libeconf0...
+[    3s] [7/18] preinstalling libgcc_s1...
+[    3s] [8/18] preinstalling libsmartcols1...
+[    3s] [9/18] preinstalling libuuid1...
+[    3s] [10/18] preinstalling libblkid1...
+[    3s] [11/18] preinstalling perl-base...
+[    3s] [12/18] preinstalling permctl...
+[    3s] [13/18] preinstalling libmount1...
+[    3s] [14/18] preinstalling permissions-config...
+[    3s] [15/18] preinstalling libfdisk1...
+[    3s] [16/18] preinstalling permissions...
+[    3s] [17/18] preinstalling pam...
+[    3s] [18/18] preinstalling util-linux...
+[    4s] copying packages...
+[    4s] reordering...cycle: lua54 -> lua-interpreter
+[    4s]   breaking dependency lua54 -> lua-interpreter
+[    4s] cycle: binutils -> libctf0
+[    4s]   breaking dependency libctf0 -> binutils
+[    4s] cycle: ghc-base -> ghc-ghc-bignum
+[    4s]   breaking dependency ghc-base -> ghc-ghc-bignum
+[    4s] cycle: ghc-base -> ghc-ghc-internal -> ghc-ghc-bignum
+[    4s]   breaking dependency ghc-ghc-internal -> ghc-ghc-bignum
+[    4s] cycle: ghc-base -> ghc-ghc-internal
+[    4s]   breaking dependency ghc-ghc-internal -> ghc-base
+[    4s] cycle: ghc-compiler -> ghc-base-devel
+[    4s]   breaking dependency ghc-compiler -> ghc-base-devel
+[    4s] cycle: ghc-base-devel -> ghc-ghc-bignum-devel
+[    4s]   breaking dependency ghc-base-devel -> ghc-ghc-bignum-devel
+[    4s] cycle: ghc-base-devel -> ghc-ghc-internal-devel -> ghc-ghc-bignum-devel
+[    4s]   breaking dependency ghc-ghc-internal-devel -> ghc-ghc-bignum-devel
+[    4s] cycle: ghc-base-devel -> ghc-ghc-internal-devel
+[    4s]   breaking dependency ghc-ghc-internal-devel -> ghc-base-devel
+[    4s] cycle: ghc-base-prof -> ghc-ghc-bignum-prof
+[    4s]   breaking dependency ghc-base-prof -> ghc-ghc-bignum-prof
+[    4s] cycle: ghc-base-prof -> ghc-ghc-internal-prof -> ghc-ghc-bignum-prof
+[    4s]   breaking dependency ghc-ghc-internal-prof -> ghc-ghc-bignum-prof
+[    4s] cycle: ghc-base-prof -> ghc-ghc-internal-prof
+[    4s]   breaking dependency ghc-ghc-internal-prof -> ghc-base-prof
+[    4s] cycle: rpm-config-SUSE -> rpm
+[    4s]   breaking dependency rpm-config-SUSE -> rpm
+[    4s] done
+[    4s] Detected virtio-serial support
+[    5s] booting kvm...
+[    5s] ### VM INTERACTION START ###
+[    5s] Using virtio-serial support
+[    5s] /usr/bin/qemu-system-aarch64 -nodefaults -no-reboot -nographic -vga none -cpu host -enable-kvm -M virt,accel=kvm,usb=off,gic-version=host -sandbox on -object rng-random,filename=/dev/random,id=rng0 -device virtio-rng-device,rng=rng0 -object iothread,id=io0 -run-with user=qemu -net none -kernel /var/cache/obs/worker/root_29/.mount/boot/kernel -initrd /var/cache/obs/worker/root_29/.mount/boot/initrd -append root=/dev/disk/by-id/virtio-0 rootfstype=ext4 rootflags=noatime elevator=noop nmi_watchdog=0 rw ia32_emulation=1 oops=panic panic=1 quiet console=hvc0 init=/.build/build -m 10240 -drive file=/var/cache/obs/worker/root_29/root,format=raw,if=none,id=disk,cache=unsafe,aio=io_uring -device virtio-blk-device,iothread=io0,drive=disk,serial=0 -drive file=/var/cache/obs/worker/root_29/swap,format=raw,if=none,id=swap,cache=unsafe,aio=io_uring -device virtio-blk-device,iothread=io0,drive=swap,serial=1 -device virtio-serial,max_ports=2 -device virtconsole,chardev=virtiocon0 -chardev stdio,id=virtiocon0 -chardev socket,id=monitor,server=on,wait=off,path=/var/cache/obs/worker/root_29/root.qemu/monitor -mon chardev=monitor,mode=readline -smp 4
+[    6s] [!p]104[?7h[    0.415716][    T1] systemd[1]: Failed to start Virtual Console Setup.
+[    6s] [[0;1;31mFAILED[0m] Failed to start [0;1;39mVirtual Console Setup[0m.
+[    8s] [6n[32766;32766H[6n[!p]104[?7h### VM INTERACTION END ###
+[    8s] 2nd stage started in virtual machine
+[    8s] ^[[24;10R^[[24;80Rmachine type: aarch64
+[    8s] Linux version: 6.16.7-1-default #1 SMP PREEMPT_DYNAMIC Fri Sep 12 07:00:22 UTC 2025 (4e78a24)
+[    8s] Time: Mon Sep 22 06:49:46 UTC 2025
+[    8s] Increasing log level from now on...
+[    8s] [    2.431468][  T471] sysrq: Changing Loglevel
+[    8s] [    2.431567][  T471] sysrq: Loglevel set to 4
+[    8s] Enable sysrq operations
+[    8s] Setting up swapspace version 1, size = 2 GiB (2147479552 bytes)
+[    8s] no label, UUID=63bf6ffa-bbe6-4fd8-b398-1a5fa0be0170
+[    8s] WARNING: udev not running, creating extra device nodes
+[    8s] logging output to //.build.log...
+[    8s] processing recipe //.build-srcdir/texmath.spec ...
+[    8s] init_buildsystem --configdir /.build/configs --cachedir /var/cache/build //.build-srcdir/texmath.spec build ...
+[    8s] initializing rpm db...
+[    8s] querying package ids...
+[    9s] [1/390] cumulate compat-usrmerge-tools-84.87-1.1
+[    9s] [2/390] cumulate crypto-policies-20250124.4d262e7-4.1
+[    9s] [3/390] cumulate file-magic-5.46-5.1
+[    9s] [4/390] cumulate ghc-filesystem-9.10.2-4.1
+[    9s] [5/390] cumulate kernel-obs-build-6.16.7-1.1
+[    9s] [6/390] cumulate pkgconf-m4-2.2.0-1.6
+[    9s] [7/390] cumulate system-user-root-20190513-1.1
+[    9s] [8/390] cumulate terminfo-base-6.5.20250913-82.1
+[    9s] [9/390] cumulate filesystem-84.87-18.3
+[    9s] [10/390] cumulate glibc-2.42-2.1
+[    9s] [11/390] cumulate chrpath-0.18-1.1
+[    9s] [12/390] cumulate diffutils-3.12-1.1
+[    9s] [13/390] cumulate envsubst-mini-0.26-1.1
+[    9s] [14/390] cumulate fillup-1.42-281.5
+[    9s] [15/390] cumulate glibc-gconv-modules-extra-2.42-2.1
+[    9s] [16/390] cumulate glibc-locale-base-2.42-2.1
+[    9s] [17/390] cumulate libacl1-2.3.2-2.6
+[    9s] [18/390] cumulate libalternatives1-1.2+31.da24cd4-1.1
+[    9s] [19/390] cumulate libatomic1-15.2.0+git10201-1.1
+[    9s] [20/390] cumulate libattr1-2.5.2-1.6
+[    9s] [21/390] cumulate libaudit1-4.0.2-1.1
+[    9s] [22/390] cumulate libbz2-1-1.0.8-1.1
+[    9s] [23/390] cumulate libcap-ng0-0.8.5-1.6
+[    9s] [24/390] cumulate libcap2-2.75-1.1
+[    9s] [25/390] cumulate libcrypt1-4.4.38-1.1
+[    9s] [26/390] cumulate libeconf0-0.7.10-1.1
+[    9s] [27/390] cumulate libffi8-3.5.2-1.1
+[    9s] [28/390] cumulate libgcc_s1-15.2.0+git10201-1.1
+[    9s] [29/390] cumulate libgdbm6-1.26-1.1
+[    9s] [30/390] cumulate libgmp10-6.3.0-5.1
+[    9s] [31/390] cumulate libgomp1-15.2.0+git10201-1.1
+[    9s] [32/390] cumulate libgpg-error0-1.55-1.1
+[    9s] [33/390] cumulate libitm1-15.2.0+git10201-1.1
+[    9s] [34/390] cumulate libjitterentropy3-3.6.3-1.1
+[    9s] [35/390] cumulate liblua5_4-5-5.4.8-3.1
+[    9s] [36/390] cumulate liblz1-1.15-1.3
+[    9s] [37/390] cumulate liblz4-1-1.10.0-1.1
+[    9s] [38/390] cumulate liblzma5-5.8.1-1.1
+[    9s] [39/390] cumulate libnuma1-2.0.19.14.g690a72c-2.1
+[    9s] [40/390] cumulate libpcre2-8-0-10.46-1.1
+[    9s] [41/390] cumulate libpkgconf5-2.2.0-1.6
+[    9s] [42/390] cumulate libpopt0-1.19-1.1
+[    9s] [43/390] cumulate libseccomp2-2.6.0-2.4
+[    9s] [44/390] cumulate libsmartcols1-2.41.1-4.1
+[    9s] [45/390] cumulate libuuid1-2.41.1-4.1
+[    9s] [46/390] cumulate libz1-1.3.1-1.1
+[    9s] [47/390] cumulate libzstd1-1.5.7-1.1
+[    9s] [48/390] cumulate patch-2.8-1.1
+[    9s] [49/390] cumulate update-alternatives-1.22.21-1.1
+[    9s] [50/390] cumulate which-2.23-1.4
+[    9s] [51/390] cumulate libncurses6-6.5.20250913-82.1
+[    9s] [52/390] cumulate alts-1.2+31.da24cd4-1.1
+[    9s] [53/390] cumulate libblkid1-2.41.1-4.1
+[    9s] [54/390] cumulate libctf-nobfd0-2.43-10.1
+[    9s] [55/390] cumulate libgdbm_compat4-1.26-1.1
+[    9s] [56/390] cumulate libisl23-0.27-1.4
+[    9s] [57/390] cumulate libmpfr6-4.2.2-1.1
+[    9s] [58/390] cumulate libreadline8-8.3.1-1.1
+[    9s] [59/390] cumulate libselinux1-3.9-2.1
+[    9s] [60/390] cumulate libstdc++6-15.2.0+git10201-1.1
+[    9s] [61/390] cumulate ncurses-utils-6.5.20250913-82.1
+[    9s] [62/390] cumulate perl-base-5.42.0-1.1
+[    9s] [63/390] cumulate pkgconf-2.2.0-1.6
+[    9s] [64/390] cumulate libelf1-0.192-2.4
+[    9s] [65/390] cumulate libgcrypt20-1.11.2-1.1
+[    9s] [66/390] cumulate libxml2-2-2.13.8-1.1
+[    9s] [67/390] cumulate permctl-1699_20250120-1.1
+[    9s] [68/390] cumulate libmagic1-5.46-5.1
+[    9s] [69/390] cumulate build-mkbaselibs-20250829-1.1
+[    9s] [70/390] cumulate bash-5.3.3-1.1
+[    9s] [71/390] cumulate dwz-0.15-1.1
+[    9s] [72/390] cumulate findutils-4.10.0-2.4
+[    9s] [73/390] cumulate file-5.46-5.1
+[    9s] [74/390] cumulate libasan8-15.2.0+git10201-1.1
+[    9s] [75/390] cumulate libfdisk1-2.41.1-4.1
+[    9s] [76/390] cumulate libhwasan0-15.2.0+git10201-1.1
+[    9s] [77/390] cumulate liblsan0-15.2.0+git10201-1.1
+[    9s] [78/390] cumulate libmount1-2.41.1-4.1
+[    9s] [79/390] cumulate libmpc3-1.3.1-1.1
+[    9s] [80/390] cumulate libtsan2-15.2.0+git10201-1.1
+[    9s] [81/390] cumulate libubsan1-15.2.0+git10201-1.1
+[    9s] [82/390] cumulate sed-4.9-2.11
+[    9s] [83/390] cumulate tar-1.35-1.1
+[    9s] [84/390] cumulate libgmpxx4-6.3.0-5.1
+[    9s] [85/390] cumulate libdw1-0.192-2.4
+[    9s] [86/390] cumulate perl-5.42.0-1.1
+[    9s] [87/390] cumulate bash-sh-5.3.3-1.1
+[    9s] [88/390] cumulate brp-check-suse-84.87+git20230324.8680ce4-1.8
+[    9s] [89/390] cumulate perl-rpm-packaging-1.2-1.4
+[    9s] [90/390] cumulate libasm1-0.192-2.4
+[    9s] [91/390] cumulate cpp15-15.2.0+git10201-1.1
+[    9s] [92/390] cumulate cpio-2.15-1.1
+[    9s] [93/390] cumulate cpp-15-1.1
+[    9s] [94/390] cumulate gzip-1.14-1.1
+[    9s] [95/390] cumulate make-4.4.1-3.6
+[    9s] [96/390] cumulate bzip2-1.0.8-1.1
+[    9s] [97/390] cumulate grep-3.12-1.1
+[    9s] [98/390] cumulate pkgconf-pkg-config-2.2.0-1.6
+[    9s] [99/390] cumulate xz-5.8.1-1.1
+[    9s] [100/390] cumulate gettext-runtime-mini-0.26-1.1
+[    9s] [101/390] cumulate gawk-5.3.2-1.1
+[    9s] [102/390] cumulate coreutils-9.7-3.1
+[    9s] [103/390] cumulate elfutils-0.192-2.4
+[    9s] [104/390] cumulate linux-glibc-devel-6.16-1.1
+[    9s] [105/390] cumulate systemd-rpm-macros-26-1.1
+[    9s] [106/390] cumulate libffi-devel-3.5.2-1.1
+[    9s] [107/390] cumulate libnuma-devel-2.0.19.14.g690a72c-2.1
+[    9s] [108/390] cumulate libxcrypt-devel-4.4.38-1.1
+[    9s] [109/390] cumulate xz-devel-5.8.1-1.1
+[    9s] [110/390] cumulate gmp-devel-6.3.0-5.1
+[    9s] [111/390] cumulate libopenssl3-3.5.3-1.1
+[    9s] [112/390] cumulate permissions-config-1699_20250120-1.1
+[    9s] [113/390] cumulate polkit-default-privs-1550+20250904.99b438e-1.1
+[    9s] [114/390] cumulate gettext-tools-mini-0.26-1.1
+[    9s] [115/390] cumulate aaa_base-84.87+git20250903.33e5ba4-1.1
+[    9s] [116/390] cumulate aaa_base-malloccheck-84.87+git20250903.33e5ba4-1.1
+[    9s] [117/390] cumulate permissions-1699_20250120-1.1
+[    9s] [118/390] cumulate glibc-devel-2.42-2.1
+[    9s] [119/390] cumulate rpmlint-mini-2.8.0+git20250909.1bb96561-18.55
+[    9s] [120/390] cumulate libarchive13-3.8.1-1.1
+[    9s] [121/390] cumulate libzstd-devel-1.5.7-1.1
+[    9s] [122/390] cumulate zlib-devel-1.3.1-1.1
+[    9s] [123/390] cumulate pam-1.7.1-5.1
+[    9s] [124/390] cumulate post-build-checks-84.87+git20250725.0c3a172-1.1
+[    9s] [125/390] cumulate libelf-devel-0.192-2.4
+[    9s] [126/390] cumulate util-linux-2.41.1-4.1
+[    9s] [127/390] cumulate libdw-devel-0.192-2.4
+[    9s] [128/390] cumulate rpm-config-SUSE-20250904-1.1
+[    9s] [129/390] cumulate libctf0-2.43-10.1
+[    9s] [130/390] cumulate ghc-ghc-internal-9.1002.0-4.1
+[    9s] [131/390] cumulate lua54-5.4.8-3.1
+[    9s] [132/390] cumulate compat-usrmerge-build-84.87-1.1
+[    9s] [133/390] cumulate lua-interpreter-5-3.1
+[    9s] [134/390] cumulate ghc-base-4.20.1.0-4.1
+[    9s] [135/390] cumulate binutils-2.43-10.1
+[    9s] [136/390] cumulate rpm-4.20.1-6.1
+[    9s] [137/390] cumulate ghc-ghc-bignum-1.3-4.1
+[    9s] [138/390] cumulate ghc-rpm-macros-2.9.2-1.1
+[    9s] [139/390] cumulate build-compare-20240801T083050.024a3a7-1.8
+[    9s] [140/390] cumulate librpmbuild10-4.20.1-6.1
+[    9s] [141/390] cumulate debugedit-5.1-1.5
+[    9s] [142/390] cumulate gcc15-15.2.0+git10201-1.1
+[    9s] [143/390] cumulate gcc15-PIE-15.2.0+git10201-1.1
+[    9s] [144/390] cumulate gcc-15-1.1
+[    9s] [145/390] cumulate ghc-array-0.5.8.0-4.1
+[    9s] [146/390] cumulate ghc-assoc-1.1.1-2.6
+[    9s] [147/390] cumulate ghc-base-orphans-0.9.3-1.6
+[    9s] [148/390] cumulate ghc-character-ps-0.1-1.12
+[    9s] [149/390] cumulate ghc-colour-2.3.6-2.26
+[    9s] [150/390] cumulate ghc-generically-0.1.1-5.6
+[    9s] [151/390] cumulate ghc-ghc-boot-th-9.10.2-4.1
+[    9s] [152/390] cumulate ghc-ghc-platform-0.1.0.0-4.1
+[    9s] [153/390] cumulate ghc-haskell-lexer-1.2.1-1.1
+[    9s] [154/390] cumulate ghc-split-0.2.5-1.11
+[    9s] [155/390] cumulate ghc-syb-0.7.2.4-1.14
+[    9s] [156/390] cumulate ghc-transformers-0.6.1.1-4.1
+[    9s] [157/390] cumulate ghc-vector-stream-0.1.0.1-4.6
+[    9s] [158/390] cumulate ghc-xhtml-3000.2.2.1-4.1
+[    9s] [159/390] cumulate ghc-terminfo-0.4.1.7-4.1
+[    9s] [160/390] cumulate gcc-PIE-15-1.1
+[    9s] [161/390] cumulate ghc-ansi-terminal-types-1.1.3-1.1
+[    9s] [162/390] cumulate ghc-deepseq-1.5.0.0-4.1
+[    9s] [163/390] cumulate ghc-integer-logarithms-1.0.4-1.6
+[    9s] [164/390] cumulate ghc-mtl-2.3.1-4.1
+[    9s] [165/390] cumulate ghc-stm-2.5.3.1-4.1
+[    9s] [166/390] cumulate ghc-transformers-compat-0.7.2-2.26
+[    9s] [167/390] cumulate rpm-build-4.20.1-6.1
+[    9s] [168/390] cumulate ghc-ansi-terminal-1.1.3-1.1
+[    9s] [169/390] cumulate ghc-dlist-1.0-5.7
+[    9s] [170/390] cumulate ghc-pretty-1.1.3.6-4.1
+[    9s] [171/390] cumulate ghc-splitmix-0.1.3.1-1.2
+[    9s] [172/390] cumulate ghc-time-1.12.2-4.1
+[    9s] [173/390] cumulate ghc-StateVar-1.2.2-2.14
+[    9s] [174/390] cumulate ghc-contravariant-1.5.5-2.26
+[    9s] [175/390] cumulate ghc-template-haskell-2.22.0.0-4.1
+[    9s] [176/390] cumulate ghc-OneTuple-0.4.2-2.5
+[    9s] [177/390] cumulate ghc-bytestring-0.12.2.0-4.1
+[    9s] [178/390] cumulate ghc-containers-0.7-4.1
+[    9s] [179/390] cumulate ghc-th-compat-0.1.6-1.6
+[    9s] [180/390] cumulate ghc-primitive-0.9.1.0-1.3
+[    9s] [181/390] cumulate ghc-tagged-0.8.9-1.7
+[    9s] [182/390] cumulate ghc-exceptions-0.10.9-4.1
+[    9s] [183/390] cumulate ghc-ghc-heap-9.10.2-4.1
+[    9s] [184/390] cumulate ghc-th-abstraction-0.7.1.0-2.3
+[    9s] [185/390] cumulate ghc-binary-0.8.9.3-4.1
+[    9s] [186/390] cumulate ghc-indexed-traversable-0.1.4-2.5
+[    9s] [187/390] cumulate ghc-distributive-0.6.2.1-3.16
+[    9s] [188/390] cumulate ghc-random-1.3.1-1.1
+[    9s] [189/390] cumulate ghc-os-string-2.0.4-4.1
+[    9s] [190/390] cumulate ghc-text-2.1.2-4.1
+[    9s] [191/390] cumulate ghc-QuickCheck-2.15.0.1-2.6
+[    9s] [192/390] cumulate ghc-filepath-1.5.4.0-4.1
+[    9s] [193/390] cumulate ghc-comonad-5.0.9-2.3
+[    9s] [194/390] cumulate ghc-prettyprinter-1.7.1-2.14
+[    9s] [195/390] cumulate ghc-typst-symbols-0.1.8.1-1.2
+[    9s] [196/390] cumulate ghc-xml-1.3.14-13.27
+[    9s] [197/390] cumulate ghc-integer-conversion-0.1.1-2.6
+[    9s] [198/390] cumulate ghc-parsec-3.1.18.0-4.1
+[    9s] [199/390] cumulate ghc-unix-2.8.6.0-4.1
+[    9s] [200/390] cumulate ghc-bifunctors-5.6.2-3.3
+[    9s] [201/390] cumulate ghc-hashable-1.5.0.0-2.6
+[    9s] [202/390] cumulate ghc-pretty-show-1.10-4.28
+[    9s] [203/390] cumulate ghc-network-uri-2.6.4.2-3.20
+[    9s] [204/390] cumulate ghc-prettyprinter-ansi-terminal-1.1.3-2.16
+[    9s] [205/390] cumulate ghc-directory-1.3.8.5-4.1
+[    9s] [206/390] cumulate ghc-semaphore-compat-1.0.0-4.1
+[    9s] [207/390] cumulate ghc-data-fix-0.3.4-2.5
+[    9s] [208/390] cumulate ghc-text-short-0.1.6-3.6
+[    9s] [209/390] cumulate ghc-unordered-containers-0.2.20-4.6
+[    9s] [210/390] cumulate ghc-these-1.2.1-3.5
+[    9s] [211/390] cumulate ghc-scientific-0.3.8.0-3.7
+[    9s] [212/390] cumulate ghc-time-compat-1.9.8-1.6
+[    9s] [213/390] cumulate ghc-uuid-types-1.0.6-3.6
+[    9s] [214/390] cumulate ghc-process-1.6.25.0-4.1
+[    9s] [215/390] cumulate ghc-hpc-0.7.0.2-4.1
+[    9s] [216/390] cumulate ghc-ghc-boot-9.10.2-4.1
+[    9s] [217/390] cumulate ghc-strict-0.5.1-2.11
+[    9s] [218/390] cumulate ghc-Cabal-syntax-3.12.1.0-4.1
+[    9s] [219/390] cumulate ghc-text-iso8601-0.1.1-3.6
+[    9s] [220/390] cumulate ghc-semigroupoids-6.0.1-3.3
+[    9s] [221/390] cumulate ghc-haskeline-0.8.2.1-4.1
+[    9s] [222/390] cumulate ghc-ghc-toolchain-0.1.0.0-4.1
+[    9s] [223/390] cumulate ghc-ghci-9.10.2-4.1
+[    9s] [224/390] cumulate ghc-Cabal-3.12.1.0-4.1
+[    9s] [225/390] cumulate ghc-optparse-applicative-0.19.0.0-1.1
+[    9s] [226/390] cumulate ghc-ghc-9.10.2-4.1
+[    9s] [227/390] cumulate ghc-tasty-1.5.3-3.4
+[    9s] [228/390] cumulate ghc-vector-0.13.2.0-2.11
+[    9s] [229/390] cumulate ghc-compiler-9.10.2-4.1
+[    9s] [230/390] cumulate ghc-ghc-internal-devel-9.1002.0-4.1
+[    9s] [231/390] cumulate ghc-indexed-traversable-instances-0.1.2-2.11
+[    9s] [232/390] cumulate ghc-ghc-internal-prof-9.1002.0-4.1
+[    9s] [233/390] cumulate ghc-base-devel-4.20.1.0-4.1
+[    9s] [234/390] cumulate ghc-witherable-0.5-1.13
+[    9s] [235/390] cumulate ghc-semialign-1.3.1-3.10
+[    9s] [236/390] cumulate ghc-array-devel-0.5.8.0-4.1
+[    9s] [237/390] cumulate ghc-ghc-bignum-devel-1.3-4.1
+[    9s] [238/390] cumulate ghc-ghc-boot-th-devel-9.10.2-4.1
+[    9s] [239/390] cumulate ghc-transformers-devel-0.6.1.1-4.1
+[    9s] [240/390] cumulate ghc-assoc-devel-1.1.1-2.6
+[    9s] [241/390] cumulate ghc-base-orphans-devel-0.9.3-1.6
+[    9s] [242/390] cumulate ghc-character-ps-devel-0.1-1.12
+[    9s] [243/390] cumulate ghc-colour-devel-2.3.6-2.26
+[    9s] [244/390] cumulate ghc-generically-devel-0.1.1-5.6
+[    9s] [245/390] cumulate ghc-haskell-lexer-devel-1.2.1-1.1
+[    9s] [246/390] cumulate ghc-split-devel-0.2.5-1.11
+[    9s] [247/390] cumulate ghc-syb-devel-0.7.2.4-1.14
+[    9s] [248/390] cumulate ghc-vector-stream-devel-0.1.0.1-4.6
+[    9s] [249/390] cumulate ghc-base-prof-4.20.1.0-4.1
+[    9s] [250/390] cumulate ghc-aeson-2.2.3.0-5.6
+[    9s] [251/390] cumulate ghc-array-prof-0.5.8.0-4.1
+[    9s] [252/390] cumulate ghc-assoc-prof-1.1.1-2.6
+[    9s] [253/390] cumulate ghc-base-orphans-prof-0.9.3-1.6
+[    9s] [254/390] cumulate ghc-character-ps-prof-0.1-1.12
+[    9s] [255/390] cumulate ghc-colour-prof-2.3.6-2.26
+[    9s] [256/390] cumulate ghc-generically-prof-0.1.1-5.6
+[    9s] [257/390] cumulate ghc-ghc-bignum-prof-1.3-4.1
+[    9s] [258/390] cumulate ghc-ghc-boot-th-prof-9.10.2-4.1
+[    9s] [259/390] cumulate ghc-haskell-lexer-prof-1.2.1-1.1
+[    9s] [260/390] cumulate ghc-split-prof-0.2.5-1.11
+[    9s] [261/390] cumulate ghc-syb-prof-0.7.2.4-1.14
+[    9s] [262/390] cumulate ghc-transformers-prof-0.6.1.1-4.1
+[    9s] [263/390] cumulate ghc-vector-stream-prof-0.1.0.1-4.6
+[    9s] [264/390] cumulate ghc-deepseq-devel-1.5.0.0-4.1
+[    9s] [265/390] cumulate ghc-mtl-devel-2.3.1-4.1
+[    9s] [266/390] cumulate ghc-stm-devel-2.5.3.1-4.1
+[    9s] [267/390] cumulate ghc-ansi-terminal-types-devel-1.1.3-1.1
+[    9s] [268/390] cumulate ghc-transformers-compat-devel-0.7.2-2.26
+[    9s] [269/390] cumulate ghc-integer-logarithms-devel-1.0.4-1.6
+[    9s] [270/390] cumulate ghc-pandoc-types-1.23.1-4.4
+[    9s] [271/390] cumulate ghc-ansi-terminal-types-prof-1.1.3-1.1
+[    9s] [272/390] cumulate ghc-deepseq-prof-1.5.0.0-4.1
+[    9s] [273/390] cumulate ghc-mtl-prof-2.3.1-4.1
+[    9s] [274/390] cumulate ghc-stm-prof-2.5.3.1-4.1
+[    9s] [275/390] cumulate ghc-transformers-compat-prof-0.7.2-2.26
+[    9s] [276/390] cumulate ghc-integer-logarithms-prof-1.0.4-1.6
+[    9s] [277/390] cumulate ghc-pretty-devel-1.1.3.6-4.1
+[    9s] [278/390] cumulate ghc-time-devel-1.12.2-4.1
+[    9s] [279/390] cumulate ghc-dlist-devel-1.0-5.7
+[    9s] [280/390] cumulate ghc-splitmix-devel-0.1.3.1-1.2
+[    9s] [281/390] cumulate ghc-StateVar-devel-1.2.2-2.14
+[    9s] [282/390] cumulate ghc-ansi-terminal-devel-1.1.3-1.1
+[    9s] [283/390] cumulate ghc-dlist-prof-1.0-5.7
+[    9s] [284/390] cumulate ghc-pretty-prof-1.1.3.6-4.1
+[    9s] [285/390] cumulate ghc-splitmix-prof-0.1.3.1-1.2
+[    9s] [286/390] cumulate ghc-time-prof-1.12.2-4.1
+[    9s] [287/390] cumulate ghc-StateVar-prof-1.2.2-2.14
+[    9s] [288/390] cumulate ghc-ansi-terminal-prof-1.1.3-1.1
+[    9s] [289/390] cumulate ghc-template-haskell-devel-2.22.0.0-4.1
+[    9s] [290/390] cumulate ghc-contravariant-devel-1.5.5-2.26
+[    9s] [291/390] cumulate ghc-contravariant-prof-1.5.5-2.26
+[    9s] [292/390] cumulate ghc-template-haskell-prof-2.22.0.0-4.1
+[    9s] [293/390] cumulate ghc-OneTuple-devel-0.4.2-2.5
+[    9s] [294/390] cumulate ghc-bytestring-devel-0.12.2.0-4.1
+[    9s] [295/390] cumulate ghc-th-compat-devel-0.1.6-1.6
+[    9s] [296/390] cumulate ghc-containers-devel-0.7-4.1
+[    9s] [297/390] cumulate ghc-exceptions-devel-0.10.9-4.1
+[    9s] [298/390] cumulate ghc-primitive-devel-0.9.1.0-1.3
+[    9s] [299/390] cumulate ghc-tagged-devel-0.8.9-1.7
+[    9s] [300/390] cumulate ghc-OneTuple-prof-0.4.2-2.5
+[    9s] [301/390] cumulate ghc-th-compat-prof-0.1.6-1.6
+[    9s] [302/390] cumulate ghc-bytestring-prof-0.12.2.0-4.1
+[    9s] [303/390] cumulate ghc-containers-prof-0.7-4.1
+[    9s] [304/390] cumulate ghc-primitive-prof-0.9.1.0-1.3
+[    9s] [305/390] cumulate ghc-tagged-prof-0.8.9-1.7
+[    9s] [306/390] cumulate ghc-binary-devel-0.8.9.3-4.1
+[    9s] [307/390] cumulate ghc-exceptions-prof-0.10.9-4.1
+[    9s] [308/390] cumulate ghc-th-abstraction-devel-0.7.1.0-2.3
+[    9s] [309/390] cumulate ghc-distributive-devel-0.6.2.1-3.16
+[    9s] [310/390] cumulate ghc-indexed-traversable-devel-0.1.4-2.5
+[    9s] [311/390] cumulate ghc-os-string-devel-2.0.4-4.1
+[    9s] [312/390] cumulate ghc-random-devel-1.3.1-1.1
+[    9s] [313/390] cumulate ghc-th-abstraction-prof-0.7.1.0-2.3
+[    9s] [314/390] cumulate ghc-binary-prof-0.8.9.3-4.1
+[    9s] [315/390] cumulate ghc-distributive-prof-0.6.2.1-3.16
+[    9s] [316/390] cumulate ghc-indexed-traversable-prof-0.1.4-2.5
+[    9s] [317/390] cumulate ghc-os-string-prof-2.0.4-4.1
+[    9s] [318/390] cumulate ghc-random-prof-1.3.1-1.1
+[    9s] [319/390] cumulate ghc-filepath-devel-1.5.4.0-4.1
+[    9s] [320/390] cumulate ghc-text-devel-2.1.2-4.1
+[    9s] [321/390] cumulate ghc-QuickCheck-devel-2.15.0.1-2.6
+[    9s] [322/390] cumulate ghc-comonad-devel-5.0.9-2.3
+[    9s] [323/390] cumulate ghc-prettyprinter-devel-1.7.1-2.14
+[    9s] [324/390] cumulate ghc-typst-symbols-devel-0.1.8.1-1.2
+[    9s] [325/390] cumulate ghc-parsec-devel-3.1.18.0-4.1
+[    9s] [326/390] cumulate ghc-xml-devel-1.3.14-13.27
+[    9s] [327/390] cumulate ghc-filepath-prof-1.5.4.0-4.1
+[    9s] [328/390] cumulate ghc-integer-conversion-devel-0.1.1-2.6
+[    9s] [329/390] cumulate ghc-text-prof-2.1.2-4.1
+[    9s] [330/390] cumulate ghc-unix-devel-2.8.6.0-4.1
+[    9s] [331/390] cumulate ghc-QuickCheck-prof-2.15.0.1-2.6
+[    9s] [332/390] cumulate ghc-comonad-prof-5.0.9-2.3
+[    9s] [333/390] cumulate ghc-pretty-show-devel-1.10-4.28
+[    9s] [334/390] cumulate ghc-bifunctors-devel-5.6.2-3.3
+[    9s] [335/390] cumulate ghc-hashable-devel-1.5.0.0-2.6
+[    9s] [336/390] cumulate ghc-prettyprinter-prof-1.7.1-2.14
+[    9s] [337/390] cumulate ghc-typst-symbols-prof-0.1.8.1-1.2
+[    9s] [338/390] cumulate ghc-xml-prof-1.3.14-13.27
+[    9s] [339/390] cumulate ghc-integer-conversion-prof-0.1.1-2.6
+[    9s] [340/390] cumulate ghc-parsec-prof-3.1.18.0-4.1
+[    9s] [341/390] cumulate ghc-data-fix-devel-0.3.4-2.5
+[    9s] [342/390] cumulate ghc-unix-prof-2.8.6.0-4.1
+[    9s] [343/390] cumulate ghc-directory-devel-1.3.8.5-4.1
+[    9s] [344/390] cumulate ghc-pretty-show-prof-1.10-4.28
+[    9s] [345/390] cumulate ghc-prettyprinter-ansi-terminal-devel-1.1.3-2.16
+[    9s] [346/390] cumulate ghc-unordered-containers-devel-0.2.20-4.6
+[    9s] [347/390] cumulate ghc-network-uri-devel-2.6.4.2-3.20
+[    9s] [348/390] cumulate ghc-these-devel-1.2.1-3.5
+[    9s] [349/390] cumulate ghc-bifunctors-prof-5.6.2-3.3
+[    9s] [350/390] cumulate ghc-hashable-prof-1.5.0.0-2.6
+[    9s] [351/390] cumulate ghc-time-compat-devel-1.9.8-1.6
+[    9s] [352/390] cumulate ghc-text-short-devel-0.1.6-3.6
+[    9s] [353/390] cumulate ghc-uuid-types-devel-1.0.6-3.6
+[    9s] [354/390] cumulate ghc-scientific-devel-0.3.8.0-3.7
+[    9s] [355/390] cumulate ghc-data-fix-prof-0.3.4-2.5
+[    9s] [356/390] cumulate ghc-prettyprinter-ansi-terminal-prof-1.1.3-2.16
+[    9s] [357/390] cumulate ghc-unordered-containers-prof-0.2.20-4.6
+[    9s] [358/390] cumulate ghc-directory-prof-1.3.8.5-4.1
+[    9s] [359/390] cumulate ghc-network-uri-prof-2.6.4.2-3.20
+[    9s] [360/390] cumulate ghc-these-prof-1.2.1-3.5
+[    9s] [361/390] cumulate ghc-process-devel-1.6.25.0-4.1
+[    9s] [362/390] cumulate ghc-time-compat-prof-1.9.8-1.6
+[    9s] [363/390] cumulate ghc-text-iso8601-devel-0.1.1-3.6
+[    9s] [364/390] cumulate ghc-text-short-prof-0.1.6-3.6
+[    9s] [365/390] cumulate ghc-uuid-types-prof-1.0.6-3.6
+[    9s] [366/390] cumulate ghc-scientific-prof-0.3.8.0-3.7
+[    9s] [367/390] cumulate ghc-strict-devel-0.5.1-2.11
+[    9s] [368/390] cumulate ghc-Cabal-syntax-devel-3.12.1.0-4.1
+[    9s] [369/390] cumulate ghc-semigroupoids-devel-6.0.1-3.3
+[    9s] [370/390] cumulate ghc-process-prof-1.6.25.0-4.1
+[    9s] [371/390] cumulate ghc-text-iso8601-prof-0.1.1-3.6
+[    9s] [372/390] cumulate ghc-optparse-applicative-devel-0.19.0.0-1.1
+[    9s] [373/390] cumulate ghc-strict-prof-0.5.1-2.11
+[    9s] [374/390] cumulate ghc-semigroupoids-prof-6.0.1-3.3
+[    9s] [375/390] cumulate ghc-Cabal-devel-3.12.1.0-4.1
+[    9s] [376/390] cumulate ghc-optparse-applicative-prof-0.19.0.0-1.1
+[    9s] [377/390] cumulate ghc-tasty-devel-1.5.3-3.4
+[    9s] [378/390] cumulate ghc-tasty-prof-1.5.3-3.4
+[    9s] [379/390] cumulate ghc-vector-devel-0.13.2.0-2.11
+[    9s] [380/390] cumulate ghc-vector-prof-0.13.2.0-2.11
+[    9s] [381/390] cumulate ghc-indexed-traversable-instances-devel-0.1.2-2.11
+[    9s] [382/390] cumulate ghc-indexed-traversable-instances-prof-0.1.2-2.11
+[    9s] [383/390] cumulate ghc-witherable-devel-0.5-1.13
+[    9s] [384/390] cumulate ghc-semialign-devel-1.3.1-3.10
+[    9s] [385/390] cumulate ghc-witherable-prof-0.5-1.13
+[    9s] [386/390] cumulate ghc-semialign-prof-1.3.1-3.10
+[    9s] [387/390] cumulate ghc-aeson-devel-2.2.3.0-5.6
+[    9s] [388/390] cumulate ghc-pandoc-types-devel-1.23.1-4.4
+[    9s] [389/390] cumulate ghc-aeson-prof-2.2.3.0-5.6
+[    9s] [390/390] cumulate ghc-pandoc-types-prof-1.23.1-4.4
+[    9s] now installing cumulated packages
+[    9s] Preparing...                          ########################################
+[    9s] Updating / installing...
+[    9s] system-user-root-20190513-1.1         ########################################
+[    9s] terminfo-base-6.5.20250913-82.1       ########################################
+[    9s] pkgconf-m4-2.2.0-1.6                  ########################################
+[    9s] ghc-filesystem-9.10.2-4.1             ########################################
+[    9s] file-magic-5.46-5.1                   ########################################
+[    9s] crypto-policies-20250124.4d262e7-4.1  ########################################
+[    9s] compat-usrmerge-tools-84.87-1.1       ########################################
+[    9s] filesystem-84.87-18.3                 ########################################
+[    9s] glibc-2.42-2.1                        ########################################
+[    9s] libgmp10-6.3.0-5.1                    ########################################
+[    9s] libz1-1.3.1-1.1                       ########################################
+[    9s] libgcc_s1-15.2.0+git10201-1.1         ########################################
+[    9s] libstdc++6-15.2.0+git10201-1.1        ########################################
+[    9s] libzstd1-1.5.7-1.1                    ########################################
+[    9s] libelf1-0.192-2.4                     ########################################
+[    9s] liblzma5-5.8.1-1.1                    ########################################
+[    9s] libacl1-2.3.2-2.6                     ########################################
+[    9s] libbz2-1-1.0.8-1.1                    ########################################
+[    9s] libncurses6-6.5.20250913-82.1         ########################################
+[    9s] libdw1-0.192-2.4                      ########################################
+[    9s] libcrypt1-4.4.38-1.1                  ########################################
+[    9s] perl-base-5.42.0-1.1                  ########################################
+[    9s] libffi8-3.5.2-1.1                     ########################################
+[    9s] libnuma1-2.0.19.14.g690a72c-2.1       ########################################
+[    9s] ghc-ghc-internal-9.1002.0-4.1         ########################################
+[    9s] ghc-base-4.20.1.0-4.1                 ########################################
+[    9s] ghc-ghc-bignum-1.3-4.1                ########################################
+[    9s] ghc-array-0.5.8.0-4.1                 ########################################
+[    9s] ghc-deepseq-1.5.0.0-4.1               ########################################
+[    9s] ghc-pretty-1.1.3.6-4.1                ########################################
+[    9s] ghc-ghc-boot-th-9.10.2-4.1            ########################################
+[    9s] ghc-template-haskell-2.22.0.0-4.1     ########################################
+[    9s] ghc-transformers-0.6.1.1-4.1          ########################################
+[    9s] ghc-bytestring-0.12.2.0-4.1           ########################################
+[    9s] ghc-containers-0.7-4.1                ########################################
+[    9s] ghc-mtl-2.3.1-4.1                     ########################################
+[    9s] ghc-stm-2.5.3.1-4.1                   ########################################
+[    9s] ghc-exceptions-0.10.9-4.1             ########################################
+[    9s] ghc-binary-0.8.9.3-4.1                ########################################
+[    9s] ghc-os-string-2.0.4-4.1               ########################################
+[    9s] ghc-filepath-1.5.4.0-4.1              ########################################
+[    9s] ghc-text-2.1.2-4.1                    ########################################
+[    9s] ghc-time-1.12.2-4.1                   ########################################
+[    9s] ghc-unix-2.8.6.0-4.1                  ########################################
+[    9s] ghc-hashable-1.5.0.0-2.6              ########################################
+[    9s] ghc-directory-1.3.8.5-4.1             ########################################
+[   10s] ghc-tagged-0.8.9-1.7                  ########################################
+[   10s] ghc-base-orphans-0.9.3-1.6            ########################################
+[   10s] ghc-primitive-0.9.1.0-1.3             ########################################
+[   10s] ghc-process-1.6.25.0-4.1              ########################################
+[   10s] ghc-indexed-traversable-0.1.4-2.5     ########################################
+[   10s] ghc-assoc-1.1.1-2.6                   ########################################
+[   10s] ghc-distributive-0.6.2.1-3.16         ########################################
+[   10s] ghc-unordered-containers-0.2.20-4.6   ########################################
+[   10s] ghc-parsec-3.1.18.0-4.1               ########################################
+[   10s] ghc-transformers-compat-0.7.2-2.26    ########################################
+[   10s] ghc-splitmix-0.1.3.1-1.2              ########################################
+[   10s] ghc-colour-2.3.6-2.26                 ########################################
+[   10s] ghc-vector-stream-0.1.0.1-4.6         ########################################
+[   10s] ghc-ansi-terminal-types-1.1.3-1.1     ########################################
+[   10s] ghc-random-1.3.1-1.1                  ########################################
+[   10s] ghc-comonad-5.0.9-2.3                 ########################################
+[   10s] ghc-StateVar-1.2.2-2.14               ########################################
+[   10s] ghc-th-abstraction-0.7.1.0-2.3        ########################################
+[   10s] ghc-OneTuple-0.4.2-2.5                ########################################
+[   10s] ghc-bifunctors-5.6.2-3.3              ########################################
+[   10s] ghc-contravariant-1.5.5-2.26          ########################################
+[   10s] ghc-ansi-terminal-1.1.3-1.1           ########################################
+[   10s] ghc-these-1.2.1-3.5                   ########################################
+[   10s] ghc-prettyprinter-1.7.1-2.14          ########################################
+[   10s] ghc-ghc-platform-0.1.0.0-4.1          ########################################
+[   10s] ghc-prettyprinter-ansi-terminal-1.1.3-########################################
+[   10s] ghc-semigroupoids-6.0.1-3.3           ########################################
+[   10s] ghc-integer-conversion-0.1.1-2.6      ########################################
+[   10s] ghc-time-compat-1.9.8-1.6             ########################################
+[   10s] ghc-th-compat-0.1.6-1.6               ########################################
+[   10s] ghc-integer-logarithms-1.0.4-1.6      ########################################
+[   10s] libreadline8-8.3.1-1.1                ########################################
+[   10s] bash-5.3.3-1.1                        ########################################
+[   10s] bash-sh-5.3.3-1.1                     ########################################
+[   10s] xz-5.8.1-1.1                          ########################################
+[   10s] libmpfr6-4.2.2-1.1                    ########################################
+[   10s] gawk-5.3.2-1.1                        ########################################
+[   10s] fillup-1.42-281.5                     ########################################
+[   10s] libcap2-2.75-1.1                      ########################################
+[   10s] cpio-2.15-1.1                         ########################################
+[   10s] ghc-scientific-0.3.8.0-3.7            ########################################
+[   10s] ghc-network-uri-2.6.4.2-3.20          ########################################
+[   10s] ghc-text-iso8601-0.1.1-3.6            ########################################
+[   10s] ghc-optparse-applicative-0.19.0.0-1.1 ########################################
+[   10s] ghc-ghc-boot-9.10.2-4.1               ########################################
+[   10s] ghc-strict-0.5.1-2.11                 ########################################
+[   10s] ghc-QuickCheck-2.15.0.1-2.6           ########################################
+[   10s] ghc-uuid-types-1.0.6-3.6              ########################################
+[   10s] ghc-Cabal-syntax-3.12.1.0-4.1         ########################################
+[   10s] ghc-data-fix-0.3.4-2.5                ########################################
+[   10s] ghc-text-short-0.1.6-3.6              ########################################
+[   10s] ghc-ghc-heap-9.10.2-4.1               ########################################
+[   10s] ghc-dlist-1.0-5.7                     ########################################
+[   10s] ghc-character-ps-0.1-1.12             ########################################
+[   10s] ghc-generically-0.1.1-5.6             ########################################
+[   10s] diffutils-3.12-1.1                    ########################################
+[   10s] libeconf0-0.7.10-1.1                  ########################################
+[   10s] libblkid1-2.41.1-4.1                  ########################################
+[   10s] libgomp1-15.2.0+git10201-1.1          ########################################
+[   10s] liblua5_4-5-5.4.8-3.1                 ########################################
+[   10s] libpopt0-1.19-1.1                     ########################################
+[   10s] ghc-ghci-9.10.2-4.1                   ########################################
+[   10s] ghc-Cabal-3.12.1.0-4.1                ########################################
+[   10s] ghc-tasty-1.5.3-3.4                   ########################################
+[   10s] ghc-vector-0.13.2.0-2.11              ########################################
+[   10s] ghc-indexed-traversable-instances-0.1.########################################
+[   10s] ghc-witherable-0.5-1.13               ########################################
+[   10s] ghc-semialign-1.3.1-3.10              ########################################
+[   10s] ghc-aeson-2.2.3.0-5.6                 ########################################
+[   10s] permctl-1699_20250120-1.1             ########################################
+[   10s] libmpc3-1.3.1-1.1                     ########################################
+[   10s] ghc-hpc-0.7.0.2-4.1                   ########################################
+[   10s] ghc-semaphore-compat-1.0.0-4.1        ########################################
+[   10s] ghc-haskell-lexer-1.2.1-1.1           ########################################
+[   10s] ghc-syb-0.7.2.4-1.14                  ########################################
+[   10s] ghc-terminfo-0.4.1.7-4.1              ########################################
+[   10s] dwz-0.15-1.1                          ########################################
+[   10s] libisl23-0.27-1.4                     ########################################
+[   10s] cpp15-15.2.0+git10201-1.1             ########################################
+[   10s] libaudit1-4.0.2-1.1                   ########################################
+[   10s] libgdbm6-1.26-1.1                     ########################################
+[   10s] libjitterentropy3-3.6.3-1.1           ########################################
+[   10s] libpcre2-8-0-10.46-1.1                ########################################
+[   10s] libselinux1-3.9-2.1                   ########################################
+[   10s] sed-4.9-2.11                          ########################################
+[   10s] grep-3.12-1.1                         ########################################
+[   10s] findutils-4.10.0-2.4                  ########################################
+[   10s] libuuid1-2.41.1-4.1                   ########################################
+[   10s] libfdisk1-2.41.1-4.1                  ########################################
+[   10s] libmount1-2.41.1-4.1                  ########################################
+[   10s] tar-1.35-1.1                          ########################################
+[   10s] libgdbm_compat4-1.26-1.1              ########################################
+[   10s] perl-5.42.0-1.1                       ########################################
+[   10s] perl-rpm-packaging-1.2-1.4            ########################################
+[   10s] cpp-15-1.1                            ########################################
+[   10s] ghc-haskeline-0.8.2.1-4.1             ########################################
+[   11s] ghc-pandoc-types-1.23.1-4.4           ########################################
+[   11s] ghc-pretty-show-1.10-4.28             ########################################
+[   11s] ghc-ghc-9.10.2-4.1                    ########################################
+[   11s] gzip-1.14-1.1                         ########################################
+[   11s] make-4.4.1-3.6                        ########################################
+[   11s] bzip2-1.0.8-1.1                       ########################################
+[   11s] ghc-ghc-toolchain-0.1.0.0-4.1         ########################################
+[   11s] ghc-typst-symbols-0.1.8.1-1.2         ########################################
+[   11s] ghc-xml-1.3.14-13.27                  ########################################
+[   11s] ghc-split-0.2.5-1.11                  ########################################
+[   11s] ghc-xhtml-3000.2.2.1-4.1              ########################################
+[   11s] libasm1-0.192-2.4                     ########################################
+[   11s] elfutils-0.192-2.4                    ########################################
+[   11s] ncurses-utils-6.5.20250913-82.1       ########################################
+[   11s] libxml2-2-2.13.8-1.1                  ########################################
+[   11s] libasan8-15.2.0+git10201-1.1          ########################################
+[   11s] libhwasan0-15.2.0+git10201-1.1        ########################################
+[   11s] liblsan0-15.2.0+git10201-1.1          ########################################
+[   11s] libtsan2-15.2.0+git10201-1.1          ########################################
+[   11s] libubsan1-15.2.0+git10201-1.1         ########################################
+[   11s] libgmpxx4-6.3.0-5.1                   ########################################
+[   11s] libctf-nobfd0-2.43-10.1               ########################################
+[   11s] chrpath-0.18-1.1                      ########################################
+[   11s] envsubst-mini-0.26-1.1                ########################################
+[   11s] gettext-runtime-mini-0.26-1.1         ########################################
+[   11s] glibc-gconv-modules-extra-2.42-2.1    ########################################
+[   11s] gettext-tools-mini-0.26-1.1           ########################################
+[   11s] glibc-locale-base-2.42-2.1            ########################################
+[   11s] libalternatives1-1.2+31.da24cd4-1.1   ########################################
+[   11s] alts-1.2+31.da24cd4-1.1               ########################################
+[   11s] lua-interpreter-5-3.1                 ########################################
+[   11s] lua54-5.4.8-3.1                       ########################################
+[   11s] libatomic1-15.2.0+git10201-1.1        ########################################
+[   11s] libattr1-2.5.2-1.6                    ########################################
+[   11s] coreutils-9.7-3.1                     ########################################
+[   11s] aaa_base-84.87+git20250903.33e5ba4-1.1########################################
+[   11s] Updating /etc/sysconfig/proxy ...
+[   11s] aaa_base-malloccheck-84.87+git20250903########################################
+[   11s] linux-glibc-devel-6.16-1.1            ########################################
+[   11s] systemd-rpm-macros-26-1.1             ########################################
+[   11s] libopenssl3-3.5.3-1.1                 ########################################
+[   11s] permissions-config-1699_20250120-1.1  ########################################
+[   11s] Updating /etc/sysconfig/security ...
+[   11s] Checking permissions and ownerships - using the permissions files
+[   11s] 	/usr/share/permissions/permissions
+[   11s] 	/usr/share/permissions/permissions.easy
+[   11s] 	/etc/permissions.local
+[   11s] /usr/sbin/unix_chkpwd: setting to root:shadow 4755 (wrong owner/group root:root)
+[   11s] permissions-1699_20250120-1.1         ########################################
+[   11s] pam-1.7.1-5.1                         ########################################
+[   11s] polkit-default-privs-1550+20250904.99b########################################
+[   11s] Updating /etc/sysconfig/security ...
+[   11s] can't open /etc/polkit-1/rules.d/90-default-privs.rules.new: No such file or directory
+[   11s] warning: %post(polkit-default-privs-1550+20250904.99b438e-1.1.noarch) scriptlet failed, exit status 2
+[   11s] libcap-ng0-0.8.5-1.6                  ########################################
+[   11s] libgpg-error0-1.55-1.1                ########################################
+[   11s] libgcrypt20-1.11.2-1.1                ########################################
+[   11s] rpm-config-SUSE-20250904-1.1          ########################################
+[   12s] rpm-4.20.1-6.1                        ########################################
+[   12s] Updating /etc/sysconfig/services ...
+[   12s] libitm1-15.2.0+git10201-1.1           ########################################
+[   12s] liblz1-1.15-1.3                       ########################################
+[   12s] libmagic1-5.46-5.1                    ########################################
+[   12s] librpmbuild10-4.20.1-6.1              ########################################
+[   12s] liblz4-1-1.10.0-1.1                   ########################################
+[   12s] libarchive13-3.8.1-1.1                ########################################
+[   12s] libpkgconf5-2.2.0-1.6                 ########################################
+[   12s] pkgconf-2.2.0-1.6                     ########################################
+[   12s] pkgconf-pkg-config-2.2.0-1.6          ########################################
+[   12s] libffi-devel-3.5.2-1.1                ########################################
+[   12s] libnuma-devel-2.0.19.14.g690a72c-2.1  ########################################
+[   12s] libxcrypt-devel-4.4.38-1.1            ########################################
+[   12s] glibc-devel-2.42-2.1                  ########################################
+[   12s] libzstd-devel-1.5.7-1.1               ########################################
+[   12s] zlib-devel-1.3.1-1.1                  ########################################
+[   12s] libelf-devel-0.192-2.4                ########################################
+[   12s] xz-devel-5.8.1-1.1                    ########################################
+[   12s] libdw-devel-0.192-2.4                 ########################################
+[   12s] gmp-devel-6.3.0-5.1                   ########################################
+[   12s] libseccomp2-2.6.0-2.4                 ########################################
+[   12s] file-5.46-5.1                         ########################################
+[   12s] libsmartcols1-2.41.1-4.1              ########################################
+[   12s] util-linux-2.41.1-4.1                 ########################################
+[   12s] patch-2.8-1.1                         ########################################
+[   12s] update-alternatives-1.22.21-1.1       ########################################
+[   12s] libctf0-2.43-10.1                     ########################################
+[   12s] binutils-2.43-10.1                    ########################################
+[   12s] update-alternatives: using /usr/bin/ld.bfd to provide /usr/bin/ld (ld) in auto mode
+[   13s] gcc15-15.2.0+git10201-1.1             ########################################
+[   13s] gcc-15-1.1                            ########################################
+[   13s] ghc-ghc-internal-devel-9.1002.0-4.1   ########################################
+[   13s] ghc-base-devel-4.20.1.0-4.1           ########################################
+[   13s] ghc-compiler-9.10.2-4.1               ########################################
+[   13s] ghc-ghc-bignum-devel-1.3-4.1          ########################################
+[   13s] ghc-transformers-devel-0.6.1.1-4.1    ########################################
+[   13s] ghc-array-devel-0.5.8.0-4.1           ########################################
+[   13s] ghc-deepseq-devel-1.5.0.0-4.1         ########################################
+[   13s] ghc-time-devel-1.12.2-4.1             ########################################
+[   13s] ghc-mtl-devel-2.3.1-4.1               ########################################
+[   13s] ghc-pretty-devel-1.1.3.6-4.1          ########################################
+[   13s] ghc-base-orphans-devel-0.9.3-1.6      ########################################
+[   13s] ghc-stm-devel-2.5.3.1-4.1             ########################################
+[   13s] ghc-ghc-internal-prof-9.1002.0-4.1    ########################################
+[   13s] ghc-ghc-bignum-prof-1.3-4.1           ########################################
+[   14s] ghc-base-prof-4.20.1.0-4.1            ########################################
+[   14s] ghc-transformers-prof-0.6.1.1-4.1     ########################################
+[   14s] ghc-array-prof-0.5.8.0-4.1            ########################################
+[   14s] ghc-deepseq-prof-1.5.0.0-4.1          ########################################
+[   14s] ghc-time-prof-1.12.2-4.1              ########################################
+[   14s] ghc-base-orphans-prof-0.9.3-1.6       ########################################
+[   14s] ghc-assoc-devel-1.1.1-2.6             ########################################
+[   14s] ghc-assoc-prof-1.1.1-2.6              ########################################
+[   14s] ghc-stm-prof-2.5.3.1-4.1              ########################################
+[   14s] ghc-mtl-prof-2.3.1-4.1                ########################################
+[   14s] ghc-splitmix-devel-0.1.3.1-1.2        ########################################
+[   14s] ghc-integer-logarithms-devel-1.0.4-1.6########################################
+[   14s] ghc-transformers-compat-devel-0.7.2-2.########################################
+[   14s] ghc-colour-devel-2.3.6-2.26           ########################################
+[   14s] ghc-colour-prof-2.3.6-2.26            ########################################
+[   14s] ghc-ansi-terminal-types-devel-1.1.3-1.########################################
+[   14s] ghc-ansi-terminal-devel-1.1.3-1.1     ########################################
+[   14s] ghc-transformers-compat-prof-0.7.2-2.2########################################
+[   14s] ghc-integer-logarithms-prof-1.0.4-1.6 ########################################
+[   14s] ghc-splitmix-prof-0.1.3.1-1.2         ########################################
+[   14s] ghc-pretty-prof-1.1.3.6-4.1           ########################################
+[   14s] ghc-StateVar-devel-1.2.2-2.14         ########################################
+[   14s] ghc-contravariant-devel-1.5.5-2.26    ########################################
+[   14s] ghc-dlist-devel-1.0-5.7               ########################################
+[   15s] ghc-ghc-boot-th-devel-9.10.2-4.1      ########################################
+[   15s] ghc-template-haskell-devel-2.22.0.0-4.########################################
+[   15s] ghc-bytestring-devel-0.12.2.0-4.1     ########################################
+[   15s] ghc-containers-devel-0.7-4.1          ########################################
+[   15s] ghc-tagged-devel-0.8.9-1.7            ########################################
+[   15s] ghc-binary-devel-0.8.9.3-4.1          ########################################
+[   15s] ghc-text-devel-2.1.2-4.1              ########################################
+[   15s] ghc-indexed-traversable-devel-0.1.4-2.########################################
+[   15s] ghc-primitive-devel-0.9.1.0-1.3       ########################################
+[   15s] ghc-parsec-devel-3.1.18.0-4.1         ########################################
+[   15s] ghc-random-devel-1.3.1-1.1            ########################################
+[   15s] ghc-exceptions-devel-0.10.9-4.1       ########################################
+[   15s] ghc-os-string-devel-2.0.4-4.1         ########################################
+[   15s] ghc-filepath-devel-1.5.4.0-4.1        ########################################
+[   15s] ghc-hashable-devel-1.5.0.0-2.6        ########################################
+[   15s] ghc-unordered-containers-devel-0.2.20-########################################
+[   15s] ghc-unix-devel-2.8.6.0-4.1            ########################################
+[   15s] ghc-directory-devel-1.3.8.5-4.1       ########################################
+[   15s] ghc-these-devel-1.2.1-3.5             ########################################
+[   15s] ghc-process-devel-1.6.25.0-4.1        ########################################
+[   15s] ghc-time-compat-devel-1.9.8-1.6       ########################################
+[   15s] ghc-QuickCheck-devel-2.15.0.1-2.6     ########################################
+[   16s] ghc-integer-conversion-devel-0.1.1-2.6########################################
+[   16s] ghc-prettyprinter-devel-1.7.1-2.14    ########################################
+[   16s] ghc-distributive-devel-0.6.2.1-3.16   ########################################
+[   16s] ghc-comonad-devel-5.0.9-2.3           ########################################
+[   16s] ghc-th-abstraction-devel-0.7.1.0-2.3  ########################################
+[   16s] ghc-OneTuple-devel-0.4.2-2.5          ########################################
+[   16s] ghc-bifunctors-devel-5.6.2-3.3        ########################################
+[   16s] ghc-semigroupoids-devel-6.0.1-3.3     ########################################
+[   16s] ghc-prettyprinter-ansi-terminal-devel-########################################
+[   16s] ghc-optparse-applicative-devel-0.19.0.########################################
+[   17s] ghc-tasty-devel-1.5.3-3.4             ########################################
+[   17s] ghc-text-iso8601-devel-0.1.1-3.6      ########################################
+[   17s] ghc-strict-devel-0.5.1-2.11           ########################################
+[   17s] ghc-data-fix-devel-0.3.4-2.5          ########################################
+[   17s] ghc-text-short-devel-0.1.6-3.6        ########################################
+[   17s] ghc-uuid-types-devel-1.0.6-3.6        ########################################
+[   17s] ghc-scientific-devel-0.3.8.0-3.7      ########################################
+[   17s] ghc-th-compat-devel-0.1.6-1.6         ########################################
+[   17s] ghc-network-uri-devel-2.6.4.2-3.20    ########################################
+[   17s] ghc-character-ps-devel-0.1-1.12       ########################################
+[   18s] ghc-generically-devel-0.1.1-5.6       ########################################
+[   18s] ghc-haskell-lexer-devel-1.2.1-1.1     ########################################
+[   18s] ghc-syb-devel-0.7.2.4-1.14            ########################################
+[   18s] ghc-vector-stream-devel-0.1.0.1-4.6   ########################################
+[   18s] ghc-vector-devel-0.13.2.0-2.11        ########################################
+[   18s] ghc-indexed-traversable-instances-deve########################################
+[   18s] ghc-witherable-devel-0.5-1.13         ########################################
+[   18s] ghc-semialign-devel-1.3.1-3.10        ########################################
+[   18s] ghc-aeson-devel-2.2.3.0-5.6           ########################################
+[   19s] ghc-pandoc-types-devel-1.23.1-4.4     ########################################
+[   19s] ghc-vector-stream-prof-0.1.0.1-4.6    ########################################
+[   19s] ghc-syb-prof-0.7.2.4-1.14             ########################################
+[   19s] ghc-haskell-lexer-prof-1.2.1-1.1      ########################################
+[   19s] ghc-pretty-show-devel-1.10-4.28       ########################################
+[   19s] ghc-generically-prof-0.1.1-5.6        ########################################
+[   19s] ghc-character-ps-prof-0.1-1.12        ########################################
+[   19s] ghc-Cabal-syntax-devel-3.12.1.0-4.1   ########################################
+[   19s] ghc-typst-symbols-devel-0.1.8.1-1.2   ########################################
+[   19s] ghc-xml-devel-1.3.14-13.27            ########################################
+[   19s] ghc-ghc-boot-th-prof-9.10.2-4.1       ########################################
+[   19s] ghc-template-haskell-prof-2.22.0.0-4.1########################################
+[   19s] ghc-bytestring-prof-0.12.2.0-4.1      ########################################
+[   19s] ghc-containers-prof-0.7-4.1           ########################################
+[   19s] ghc-tagged-prof-0.8.9-1.7             ########################################
+[   19s] ghc-binary-prof-0.8.9.3-4.1           ########################################
+[   19s] ghc-text-prof-2.1.2-4.1               ########################################
+[   19s] ghc-indexed-traversable-prof-0.1.4-2.5########################################
+[   20s] ghc-primitive-prof-0.9.1.0-1.3        ########################################
+[   20s] ghc-random-prof-1.3.1-1.1             ########################################
+[   20s] ghc-exceptions-prof-0.10.9-4.1        ########################################
+[   20s] ghc-os-string-prof-2.0.4-4.1          ########################################
+[   20s] ghc-filepath-prof-1.5.4.0-4.1         ########################################
+[   20s] ghc-hashable-prof-1.5.0.0-2.6         ########################################
+[   20s] ghc-unordered-containers-prof-0.2.20-4########################################
+[   20s] ghc-these-prof-1.2.1-3.5              ########################################
+[   20s] ghc-unix-prof-2.8.6.0-4.1             ########################################
+[   20s] ghc-time-compat-prof-1.9.8-1.6        ########################################
+[   20s] ghc-QuickCheck-prof-2.15.0.1-2.6      ########################################
+[   20s] ghc-integer-conversion-prof-0.1.1-2.6 ########################################
+[   20s] ghc-prettyprinter-prof-1.7.1-2.14     ########################################
+[   20s] ghc-distributive-prof-0.6.2.1-3.16    ########################################
+[   20s] ghc-comonad-prof-5.0.9-2.3            ########################################
+[   20s] ghc-th-abstraction-prof-0.7.1.0-2.3   ########################################
+[   20s] ghc-OneTuple-prof-0.4.2-2.5           ########################################
+[   20s] ghc-bifunctors-prof-5.6.2-3.3         ########################################
+[   20s] ghc-text-iso8601-prof-0.1.1-3.6       ########################################
+[   20s] ghc-directory-prof-1.3.8.5-4.1        ########################################
+[   20s] ghc-process-prof-1.6.25.0-4.1         ########################################
+[   20s] ghc-strict-prof-0.5.1-2.11            ########################################
+[   20s] ghc-data-fix-prof-0.3.4-2.5           ########################################
+[   20s] ghc-text-short-prof-0.1.6-3.6         ########################################
+[   20s] ghc-uuid-types-prof-1.0.6-3.6         ########################################
+[   20s] ghc-scientific-prof-0.3.8.0-3.7       ########################################
+[   20s] ghc-parsec-prof-3.1.18.0-4.1          ########################################
+[   20s] ghc-th-compat-prof-0.1.6-1.6          ########################################
+[   20s] ghc-network-uri-prof-2.6.4.2-3.20     ########################################
+[   20s] ghc-dlist-prof-1.0-5.7                ########################################
+[   20s] ghc-StateVar-prof-1.2.2-2.14          ########################################
+[   20s] ghc-contravariant-prof-1.5.5-2.26     ########################################
+[   20s] ghc-semigroupoids-prof-6.0.1-3.3      ########################################
+[   20s] ghc-ansi-terminal-types-prof-1.1.3-1.1########################################
+[   20s] ghc-ansi-terminal-prof-1.1.3-1.1      ########################################
+[   20s] ghc-prettyprinter-ansi-terminal-prof-1########################################
+[   20s] ghc-optparse-applicative-prof-0.19.0.0########################################
+[   20s] ghc-tasty-prof-1.5.3-3.4              ########################################
+[   20s] ghc-vector-prof-0.13.2.0-2.11         ########################################
+[   20s] ghc-indexed-traversable-instances-prof########################################
+[   20s] ghc-witherable-prof-0.5-1.13          ########################################
+[   20s] ghc-semialign-prof-1.3.1-3.10         ########################################
+[   20s] ghc-aeson-prof-2.2.3.0-5.6            ########################################
+[   20s] ghc-split-devel-0.2.5-1.11            ########################################
+[   20s] gcc15-PIE-15.2.0+git10201-1.1         ########################################
+[   20s] debugedit-5.1-1.5                     ########################################
+[   20s] which-2.23-1.4                        ########################################
+[   20s] rpm-build-4.20.1-6.1                  ########################################
+[   20s] gcc-PIE-15-1.1                        ########################################
+[   20s] ghc-split-prof-0.2.5-1.11             ########################################
+[   20s] ghc-pandoc-types-prof-1.23.1-4.4      ########################################
+[   20s] ghc-pretty-show-prof-1.10-4.28        ########################################
+[   20s] ghc-typst-symbols-prof-0.1.8.1-1.2    ########################################
+[   20s] ghc-xml-prof-1.3.14-13.27             ########################################
+[   20s] ghc-Cabal-devel-3.12.1.0-4.1          ########################################
+[   20s] build-compare-20240801T083050.024a3a7-########################################
+[   20s] ghc-rpm-macros-2.9.2-1.1              ########################################
+[   20s] rpmlint-mini-2.8.0+git20250909.1bb9656########################################
+[   20s] post-build-checks-84.87+git20250725.0c########################################
+[   20s] compat-usrmerge-build-84.87-1.1       ########################################
+[   20s] brp-check-suse-84.87+git20230324.8680c########################################
+[   20s] build-mkbaselibs-20250829-1.1         ########################################
+[   21s] kernel-obs-build-6.16.7-1.1           ########################################
+[   22s] now finalizing build dir...
+[   22s] ... running 01-add_abuild_user_to_trusted_group
+[   22s] ... running 02-set_timezone_to_utc
+[   22s] ... running 03-set-permissions-secure
+[   22s] ... running 11-hack_uname_version_to_kernel_version
+[   22s] setting SOURCE_DATE_EPOCH_MTIME to 1756928986
+[   22s] -----------------------------------------------------------------
+[   22s] I have the following modifications for texmath.spec:
+[   22s] 24c24
+[   22s] < Release:        0
+[   22s] ---
+[   22s] > Release:        1.1
+[   23s] -----------------------------------------------------------------
+[   23s] ----- building texmath.spec (user abuild)
+[   23s] -----------------------------------------------------------------
+[   23s] -----------------------------------------------------------------
+[   23s] setting SOURCE_DATE_EPOCH_MTIME to 1756928986
+[   23s] + exec rpmbuild -ba --define '_srcdefattr (-,root,root)' --nosignature --undefine _enable_debug_packages --define 'disturl obs://build.opensuse.org/home:lalala123:x86_succeed_pro/ARM/066fffb31f45c43b2f1b8694c348d9c9-texmath' /home/abuild/rpmbuild/SOURCES/texmath.spec
+[   23s] using SOURCE_DATE_EPOCH with value 1756928985 as build time
+[   23s] Executing(%mkbuilddir): /usr/bin/bash -e /var/tmp/rpm-tmp.EzvMGg
+[   23s] Executing(%prep): /usr/bin/bash -e /var/tmp/rpm-tmp.Q1kojS
+[   23s] + umask 022
+[   23s] + cd /home/abuild/rpmbuild/BUILD/texmath-0.13-build
+[   23s] + cd /home/abuild/rpmbuild/BUILD/texmath-0.13-build
+[   23s] + rm -rf texmath-0.13
+[   23s] + /usr/lib/rpm/rpmuncompress -x /home/abuild/rpmbuild/SOURCES/texmath-0.13.tar.gz
+[   23s] + STATUS=0
+[   23s] + '[' 0 -ne 0 ']'
+[   23s] + cd texmath-0.13
+[   23s] + /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
+[   23s] + RPM_EC=0
+[   23s] ++ jobs -p
+[   23s] + exit 0
+[   23s] Executing(%build): /usr/bin/bash -e /var/tmp/rpm-tmp.2lUwyO
+[   23s] + umask 022
+[   23s] + cd /home/abuild/rpmbuild/BUILD/texmath-0.13-build
+[   23s] + /usr/bin/rm -rf /home/abuild/rpmbuild/BUILD/texmath-0.13-build/BUILDROOT
+[   23s] ++ dirname /home/abuild/rpmbuild/BUILD/texmath-0.13-build/BUILDROOT
+[   23s] + /usr/bin/mkdir -p /home/abuild/rpmbuild/BUILD/texmath-0.13-build
+[   23s] + /usr/bin/mkdir /home/abuild/rpmbuild/BUILD/texmath-0.13-build/BUILDROOT
+[   24s] + cd texmath-0.13
+[   24s] + ref=/usr/lib/rpm
+[   24s] + mints=0
+[   24s] + case $(uname -m) in
+[   24s] ++ uname -m
+[   24s] + mints=20120610
+[   24s] + for s in guess sub
+[   24s] ++ find -maxdepth 8 -name config.guess
+[   24s] + for s in guess sub
+[   24s] ++ find -maxdepth 8 -name config.sub
+[   24s] ++ ls
+[   24s] ++ grep -i -e '^\(ANNOUNCE\|AUTHORS\|CHANGELOG\|CHANGES\|CONTRIBUTORS\|README\|TODO\)'
+[   24s] + for f in $(ls | grep -i -e '^\(ANNOUNCE\|AUTHORS\|CHANGELOG\|CHANGES\|CONTRIBUTORS\|README\|TODO\)')
+[   24s] + '[' -f README.md -a -x README.md ']'
+[   24s] + for f in $(ls | grep -i -e '^\(ANNOUNCE\|AUTHORS\|CHANGELOG\|CHANGES\|CONTRIBUTORS\|README\|TODO\)')
+[   24s] + '[' -f changelog.md -a -x changelog.md ']'
+[   24s] + echo
+[   24s] 
+[   24s] + echo '==== Build texmath-0.13 ===='
+[   24s] ==== Build texmath-0.13 ====
+[   24s] + '[' -f Setup.hs -o -f Setup.lhs ']'
+[   24s] + '[' -d /usr/lib64/ghc-9.10.2/lib ']'
+[   24s] + subsubdir=/lib
+[   24s] + '[' -x Setup ']'
+[   24s] + ghc --make -package Cabal -no-user-package-db -dynamic Setup
+[   24s] [1 of 2] Compiling Main             ( Setup.lhs, Setup.o )
+[   24s] [2 of 2] Linking Setup
+[   25s] + LANG=C.utf8
+[   25s] + ./Setup --version
+[   25s] Cabal library version 3.12.1.0
+[   25s] + '[' -x Setup ']'
+[   25s] + LANG=C.utf8
+[   25s] + ./Setup configure --prefix=/usr --libdir=/usr/lib64 --docdir=/usr/share/licenses/texmath '--libsubdir=$compiler/lib/$pkgid' '--datasubdir=$pkgid' '--libexecsubdir=$pkgid' --ghc --dynlibdir=/usr/lib64/ghc-9.10.2/lib --global '--ghc-options=-fobject-determinism -fhide-source-paths  ' -f+executable --enable-library-profiling --enable-shared --htmldir=/usr/share/doc/packages/ghc-9.10.2/html/libraries/texmath-0.13 --global
+[   25s] Configuring texmath-0.13...
+[   25s] ghc-9.10.2: unrecognised flag: -fobject-determinism
+[   25s] 
+[   25s] Usage: For basic information, try the `--help' option.
+[   25s] error: Bad exit status from /var/tmp/rpm-tmp.2lUwyO (%build)
+[   25s] 
+[   25s] RPM build errors:
+[   25s]     Bad exit status from /var/tmp/rpm-tmp.2lUwyO (%build)
+[   25s] ### VM INTERACTION START ###
+[   25s] [   20.015804][    T1] sysrq: Power Off
+[   25s] ### VM INTERACTION END ###
+[   25s] 
+[   25s] i03-armsrv1 failed "build texmath.spec" at Mon Sep 22 06:50:03 UTC 2025.
+[   25s] 
