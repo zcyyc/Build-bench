@@ -4,7 +4,7 @@ This repository implements the **Build-bench** framework — an end-to-end evalu
 
 The system enables **autonomous reasoning**, **tool-augmented repair**, and **executable verification** through iterative interactions based on the Model Context Protocol (MCP).
 An interactive visualization of all model results (success/failure cases, tool calls, repair iterations) is available at:  
-👉 **[https://buildbench-hub.github.io/buildbench.github.io](https://buildbench-hub.github.io/buildbench.github.io/)**  
+👉 **[https://aiops-lab-nku.github.io/Build-bench/](https://aiops-lab-nku.github.io/Build-bench/)**  
 
 
 ---
